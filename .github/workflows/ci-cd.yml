@@ -12,19 +12,19 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    enviroment: Azure
+    environment: Azure
 
     steps:
-      -name: Checkout code 🦄
-       uses: actions/checkout@v4
+      - name: Checkout code🦄
+        uses: actions/checkout@v4
 
-      -name: Setup dotnet 8
-       uses: actions/setup-dotnet@v4
-       with:
-         dotnet-version: ${{ env.DOTNET_VERSION }}
+      - name: Setup dotnet 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
 
-      -name: Restore dependencies
-       run: dotnet restore WebApi-Weather
+      - name: Restore dependencies
+        run: dotnet restore WebApi-Weather
 
-      -name: Build App
-       run: dotnet build -c Release --no-restore API/API.sln
+      - name: Build App
+        run: dotnet build -c Release --no-restore API/API.sln
