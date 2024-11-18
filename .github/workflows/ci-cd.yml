@@ -28,3 +28,6 @@ jobs:
 
       - name: Build App
         run: dotnet build -c Release --no-restore API/API.sln
+
+      - name: Publish App
+        run: dotnet publish -c Release -o ./out API/API.sln
