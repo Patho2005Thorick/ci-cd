@@ -24,7 +24,7 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Restore dependencies
-        run: dotnet restore WebApi-Weather
+        run: dotnet restore API
 
       - name: Build App
         run: dotnet build -c Release --no-restore API/API.sln
